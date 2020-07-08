@@ -1,0 +1,33 @@
+How to install SQLTools in the sublime text
+
+Step 0: First of all intall MySql then set password blank b/c further error will not appear
+code: set password for root@localhost='';
+
+Step 1: Install SQLTools from the command pallet in the subime text
+
+Step 2: Create build system is essential for display the result in the sublime text.
+
+Step 3: Setup the connection this is the trick first copy the entire the setting in the user setting right hand side then delete manully from the bottom, then save it.
+
+{
+  "connections": {
+  
+    "Connection MySQL": {
+      "type"    : "mysql",
+      "host"    : "127.0.0.1",
+      "port"    :  3306,
+      "database": "test",
+      "username": "root",
+      // use of password for MySQL is not recommended (use "defaults-extra-file" or "login-path")
+      "password": "",  // you will get a security warning in the output
+      // "defaults-extra-file": "/path/to/defaults_file_with_password",  // use [client] or [mysql] section
+      // "login-path": "your_login_path",  // login path in your ".mylogin.cnf"
+      "default-character-set": "utf8",
+      "encoding": "utf-8"
+    },
+  },
+  "default": null
+}
+
+
+Step 4: Select the connection when you start then use CTRL+e for the running the code.
